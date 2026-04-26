@@ -280,7 +280,6 @@ body{
 .btn-cta:hover::after{opacity:1}
 .btn-cta:active{transform:scale(.98)}
 .btn-cta:disabled{opacity:.5;cursor:not-allowed;transform:none}
-/* Ripple */
 .btn-cta .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.3);transform:scale(0);animation:rippleOut .6s var(--ease);pointer-events:none}
 @keyframes rippleOut{to{transform:scale(4);opacity:0}}
 .auth-div{display:flex;align-items:center;gap:14px;margin:22px 0}
@@ -311,7 +310,6 @@ body{
   display:flex;flex-direction:column;position:relative;z-index:100;
   transition:transform .4s var(--ease),background .4s;
 }
-/* Glass layered borders */
 .sidebar::after{content:'';position:absolute;top:0;right:0;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--border-accent),transparent);opacity:.4;pointer-events:none}
 .sb-top{padding:16px 16px 12px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -324,8 +322,6 @@ body{
 .new-btn:active{transform:scale(.97)}
 .sb-section{padding:10px 16px 4px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-ghost);flex-shrink:0}
 .chat-list{flex:1;overflow-y:auto;padding:2px 8px 12px}
-
-/* Chat items with slide effect */
 .c-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:var(--r-md);color:var(--txt-secondary);font-size:var(--sz-sm);cursor:pointer;background:transparent;border:none;width:100%;text-align:left;transition:all .2s var(--ease);position:relative;font-family:var(--font-body);margin-bottom:1px;overflow:hidden}
 .c-item::before{content:'';position:absolute;left:-100%;top:0;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--accent-soft),transparent);transition:left .3s var(--ease);pointer-events:none}
 .c-item:hover::before{left:100%}
@@ -348,8 +344,6 @@ body{
 .profile-info{flex:1;min-width:0;text-align:left}
 .profile-name{font-size:var(--sz-sm);font-weight:600;color:var(--txt-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .profile-sub{font-size:10px;color:var(--txt-muted)}
-
-/* Profile dropdown */
 .profile-dd{position:absolute;bottom:100%;left:0;right:0;background:var(--bg-elevated);border:1px solid var(--border-dim);border-radius:var(--r-lg);padding:6px;margin-bottom:8px;display:none;z-index:300;box-shadow:var(--shadow-lg);backdrop-filter:blur(20px)}
 .profile-dd.open{display:block;animation:ddUp .25s var(--spring)}
 @keyframes ddUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -373,15 +367,11 @@ body{
 .status-pill{display:flex;align-items:center;gap:6px;padding:4px 11px;border-radius:var(--r-full);background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.18);font-size:10px;font-weight:700;color:#4ade80;white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
 .status-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-
-/* Mode pills */
 .mode-pills{display:flex;gap:4px}
 .mode-pill{padding:5px 12px;border-radius:var(--r-full);border:1px solid var(--border-subtle);background:transparent;color:var(--txt-muted);font-size:var(--sz-xs);font-weight:600;cursor:pointer;transition:all .2s var(--ease);white-space:nowrap;font-family:var(--font-body);letter-spacing:.03em;position:relative;overflow:hidden}
 .mode-pill::after{content:'';position:absolute;inset:0;background:var(--accent);opacity:0;transition:opacity .2s;border-radius:inherit}
 .mode-pill:hover{background:var(--bg-surface);color:var(--txt-secondary);border-color:var(--border-dim);transform:scale(1.04)}
 .mode-pill.active{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent)}
-
-/* Icon btn */
 .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:none;border-radius:var(--r-md);background:transparent;color:var(--txt-muted);cursor:pointer;transition:all .2s var(--spring);flex-shrink:0}
 .icon-btn:hover{background:var(--bg-surface);color:var(--txt-primary);transform:scale(1.08)}
 .icon-btn:active{transform:scale(.88)}
@@ -435,8 +425,6 @@ body{
 .msg-row.user .msg-avatar{background:var(--bg-float);color:var(--txt-secondary);margin-left:10px;order:2;font-family:var(--font-display);font-size:11px;font-weight:800}
 .msg-body{max-width:76%;display:flex;flex-direction:column}
 .msg-row.user .msg-body{align-items:flex-end}
-
-/* Message bubble hover effect */
 .msg-bubble{padding:13px 17px;border-radius:var(--r-lg);font-size:var(--sz-md);line-height:1.68;word-wrap:break-word;word-break:break-word;transition:transform .2s var(--spring),box-shadow .2s var(--ease)}
 .msg-bubble:hover{transform:scale(1.005)}
 .msg-row.user .msg-bubble{background:var(--user-bubble);color:#0d0d14;border-bottom-right-radius:3px;box-shadow:var(--shadow-md),var(--glow-sm)}
@@ -453,22 +441,14 @@ body{
 .msg-imgs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
 .msg-imgs img{width:80px;height:80px;object-fit:cover;border-radius:var(--r-md);border:1px solid var(--border-subtle);cursor:zoom-in;transition:transform .2s;display:block}
 .msg-imgs img:hover{transform:scale(1.05)}
-
-/* Reactions */
 .msg-reactions{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
 .react-btn{padding:3px 8px;border-radius:var(--r-full);background:var(--bg-float);border:1px solid var(--border-subtle);font-size:11px;cursor:pointer;transition:all .2s var(--spring)}
 .react-btn:hover,.react-btn.on{background:var(--accent-soft);border-color:var(--border-accent);transform:scale(1.1)}
 .react-btn.on{box-shadow:0 0 8px var(--accent-soft)}
 .react-count{font-size:10px;color:var(--txt-muted);margin-left:2px}
-
-/* Pinned indicator */
 .pinned-badge{display:inline-flex;align-items:center;gap:3px;font-size:9px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;background:var(--accent-soft);border-radius:var(--r-sm);margin-bottom:4px;border:1px solid var(--border-accent)}
-
-/* Read receipt */
 .read-receipt{font-size:9px;color:var(--txt-muted);margin-top:3px;display:flex;align-items:center;gap:3px}
 .read-receipt.seen{color:var(--accent)}
-
-/* Markdown */
 .msg-bubble pre{background:rgba(0,0,0,.4);border-radius:var(--r-md);overflow:hidden;margin:10px 0;border:1px solid var(--border-subtle)}
 .code-hdr{display:flex;align-items:center;justify-content:space-between;padding:7px 13px;background:rgba(0,0,0,.3);font-size:10px;color:var(--txt-muted);font-family:var(--font-mono)}
 .lang-badge{padding:2px 6px;background:var(--accent-soft);border:1px solid var(--border-accent);border-radius:3px;color:var(--accent);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
@@ -492,27 +472,16 @@ body{
 .msg-bubble th,.msg-bubble td{padding:8px 12px;border:1px solid var(--border-subtle);text-align:left}
 .msg-bubble th{background:var(--bg-float);font-weight:600}
 .msg-bubble hr{border:none;border-top:1px solid var(--border-subtle);margin:12px 0}
-
-/* Streaming cursor — neon pulse */
-.stream-cursor{display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:2px;animation:neonBlink 1s infinite;vertical-align:text-bottom;border-radius:1px;box-shadow:0 0 6px var(--accent)}
-@keyframes neonBlink{0%,100%{opacity:1;box-shadow:0 0 8px var(--accent)}50%{opacity:0;box-shadow:none}}
-
-/* Typing dots — wave */
 .typing-dots{display:flex;gap:5px;padding:4px 0;align-items:center}
 .typing-dots span{width:7px;height:7px;border-radius:50%;background:var(--accent);opacity:.6;animation:wave 1.4s infinite;display:block}
 .typing-dots span:nth-child(2){animation-delay:.2s}
 .typing-dots span:nth-child(3){animation-delay:.4s}
 @keyframes wave{0%,60%,100%{transform:translateY(0);opacity:.6}30%{transform:translateY(-6px);opacity:1;filter:brightness(1.3)}}
-
 .err-bubble{background:rgba(239,68,68,.08)!important;border-color:rgba(239,68,68,.2)!important;color:#fca5a5!important}
-
-/* Skeleton loaders */
 .skeleton{background:linear-gradient(90deg,var(--bg-float) 25%,var(--bg-hover) 50%,var(--bg-float) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:var(--r-md)}
 @keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
 .skeleton-msg{height:60px;margin-bottom:12px}
 .skeleton-chat-item{height:36px;margin-bottom:4px}
-
-/* Particle burst */
 .particle{position:fixed;pointer-events:none;border-radius:50%;z-index:9000;animation:particleFly .8s var(--ease) forwards}
 @keyframes particleFly{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--tx,0),var(--ty,-60px)) scale(0)}}
 
@@ -545,8 +514,6 @@ body{
 .img-prev{position:relative;width:64px;height:64px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-subtle);flex-shrink:0;cursor:zoom-in}
 .img-prev img{width:100%;height:100%;object-fit:cover}
 .img-rm{position:absolute;top:3px;right:3px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.75);border:none;color:#fff;font-size:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
-
-/* Neomorphic input box */
 .input-box{
   background:var(--bg-surface);border:1px solid var(--border-dim);
   border-radius:var(--r-xl);padding:10px 10px 10px 16px;
@@ -566,19 +533,14 @@ body{
 @keyframes micPulse{0%,100%{box-shadow:0 0 0 0 var(--accent-glow)}50%{box-shadow:0 0 0 6px transparent}}
 .msg-ta{flex:1;resize:none;border:none;outline:none;background:transparent;color:var(--txt-primary);font-family:var(--font-body);font-size:var(--sz-md);padding:6px 0;max-height:150px;min-height:26px;line-height:1.55}
 .msg-ta::placeholder{color:var(--txt-muted)}
-
-/* Word counter */
 .char-count{font-size:10px;color:var(--txt-ghost);margin-bottom:4px;text-align:right;flex-shrink:0;transition:color .2s;font-family:var(--font-mono)}
 .char-count.warn{color:#f59e0b}
 .char-count.danger{color:#ef4444;animation:countShake .3s var(--ease)}
 @keyframes countShake{0%,100%{transform:none}50%{transform:translateX(-2px)}}
-
 .input-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .stop-btn{width:36px;height:36px;border:none;border-radius:var(--r-md);background:#ef4444;color:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;transition:all .15s}
 .stop-btn.show{display:flex}
 .stop-btn:hover{background:#dc2626;transform:scale(1.05)}
-
-/* Send button — enhanced */
 .send-btn{width:36px;height:36px;border:none;border-radius:var(--r-md);background:var(--user-bubble);color:#0d0d14;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s var(--spring);box-shadow:var(--shadow-sm);flex-shrink:0;position:relative;overflow:hidden}
 .send-btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.2);opacity:0;transition:opacity .15s}
 .send-btn:disabled{opacity:.3;cursor:not-allowed;transform:none!important}
@@ -638,8 +600,6 @@ body{
 .theme-swatch:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .theme-swatch.selected{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .theme-swatch .ts-name{color:var(--txt-primary);margin-top:4px}
-
-/* Skeuomorphic toggle */
 .toggle-wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-subtle)}
 .toggle-wrap:last-child{border-bottom:none}
 .toggle-desc{font-size:var(--sz-sm);color:var(--txt-secondary)}
@@ -648,13 +608,8 @@ body{
 .toggle-switch input{opacity:0;width:0;height:0;position:absolute}
 .toggle-track{position:absolute;inset:0;border-radius:var(--r-full);background:var(--bg-float);border:1px solid var(--border-dim);cursor:pointer;transition:all .25s var(--ease);box-shadow:inset 0 2px 4px rgba(0,0,0,.3)}
 .toggle-switch input:checked+.toggle-track{background:var(--accent);border-color:var(--accent);box-shadow:0 0 10px var(--accent-soft),inset 0 1px 0 rgba(255,255,255,.2)}
-.toggle-thumb{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:all .25s var(--spring);box-shadow:0 1px 3px rgba(0,0,0,.4)}
-.toggle-switch input:checked~.toggle-thumb,.toggle-switch input:checked+.toggle-track+.toggle-thumb{left:23px}
-/* Simpler approach using ::after on track */
 .toggle-track::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:all .25s var(--spring);box-shadow:0 1px 3px rgba(0,0,0,.4)}
 .toggle-switch input:checked+.toggle-track::after{transform:translateX(20px)}
-
-/* Cursor style selector */
 .cursor-styles{display:flex;gap:6px;margin-top:8px}
 .cursor-style-btn{flex:1;padding:6px;border-radius:var(--r-md);border:1px solid var(--border-subtle);background:var(--bg-float);color:var(--txt-secondary);font-size:10px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s}
 .cursor-style-btn.active{border-color:var(--border-accent);background:var(--accent-soft);color:var(--accent)}
@@ -673,7 +628,7 @@ body{
 .stat-bar-bg{height:3px;background:var(--bg-float);border-radius:var(--r-full);overflow:hidden}
 .stat-bar{height:100%;background:linear-gradient(90deg,var(--accent),hsl(175,70%,52%));border-radius:var(--r-full);transition:width .6s var(--ease)}
 
-/* ═══ TOAST — with progress bar ════════════════ */
+/* ═══ TOAST ═════════════════════════════════════ */
 #toastWrap{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;gap:10px;align-items:center;pointer-events:none;min-width:200px}
 .toast{padding:10px 18px 10px 16px;border-radius:var(--r-lg);background:var(--bg-elevated);border:1px solid var(--border-dim);color:var(--txt-primary);font-size:var(--sz-sm);font-weight:500;box-shadow:var(--shadow-lg);animation:toastIn .35s var(--spring);white-space:nowrap;display:flex;align-items:center;gap:8px;position:relative;overflow:hidden;backdrop-filter:blur(20px)}
 .toast::after{content:'';position:absolute;bottom:0;left:0;height:2px;background:var(--accent);animation:toastProgress var(--toast-dur,2.8s) linear forwards}
@@ -707,8 +662,6 @@ body{
 #apiPill{position:fixed;bottom:16px;right:16px;padding:4px 11px;border-radius:var(--r-full);font-size:10px;z-index:500;background:var(--bg-elevated);border:1px solid var(--border-subtle);box-shadow:var(--shadow-sm);font-family:var(--font-mono);cursor:pointer;transition:all .2s}
 #apiPill.ok{color:#4ade80;border-color:rgba(74,222,128,.25)}
 #apiPill.err{color:#f87171;border-color:rgba(248,113,113,.25)}
-
-/* Draft indicator */
 .draft-indicator{font-size:10px;color:var(--accent);opacity:.7;margin-bottom:4px;display:none}
 .draft-indicator.show{display:block}
 
@@ -731,10 +684,7 @@ body{
 </head>
 <body>
 
-<!-- SKIP TO CONTENT -->
 <a href="#mainArea" class="skip-link">Skip to content</a>
-
-<!-- CURSOR GLOW -->
 <div id="cursorGlow" aria-hidden="true"></div>
 
 <!-- AUTH OVERLAY -->
@@ -772,7 +722,6 @@ body{
         <button class="auth-sw-tab active" data-tab="login">Sign In</button>
         <button class="auth-sw-tab" data-tab="signup">Create Account</button>
       </div>
-      <!-- LOGIN -->
       <div id="loginPane" class="auth-pane active">
         <div class="f-err" id="loginErr">⚠️ <span id="loginErrMsg"></span></div>
         <div class="f-group"><label for="loginEmail">Email address</label><input class="f-ctrl" type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email"/></div>
@@ -782,7 +731,6 @@ body{
         <button class="btn-ghost" id="guestBtn1"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Guest access (limited)</button>
         <div style="margin-top:14px;padding:10px 13px;border-radius:var(--r-md);background:var(--accent-soft);border:1px solid var(--border-accent)"><div style="font-size:10px;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px">Demo Account</div><div style="font-size:var(--sz-xs);color:var(--txt-secondary)"><strong style="color:var(--txt-primary)">demo@example.com</strong> / <strong style="color:var(--txt-primary)">demo123</strong></div></div>
       </div>
-      <!-- SIGNUP -->
       <div id="signupPane" class="auth-pane">
         <div class="f-err" id="signupErr">⚠️ <span id="signupErrMsg"></span></div>
         <div style="margin-bottom:20px">
@@ -816,12 +764,9 @@ body{
   </div>
 </div>
 
-<!-- DRAG OVERLAY -->
 <div id="dragOverlay" aria-hidden="true">✦ Drop image to upload</div>
-<!-- TOASTS -->
 <div id="toastWrap" aria-live="polite" aria-atomic="true"></div>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" role="dialog" aria-label="Image lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
   <img id="lightboxImg" src="" alt="Full size image"/>
@@ -844,8 +789,6 @@ body{
 <div id="settingsModal" class="modal-bd" role="dialog" aria-label="Settings">
   <div class="modal" style="max-width:540px">
     <div class="modal-hd"><span class="modal-title">Settings</span><button class="modal-close" data-close="settingsModal" aria-label="Close">✕</button></div>
-
-    <!-- THEMES -->
     <div class="sect">
       <div class="sect-title">Theme</div>
       <div class="theme-grid" id="themeGrid">
@@ -857,16 +800,11 @@ body{
         <div class="theme-swatch" data-theme-val="auto" style="background:linear-gradient(135deg,#f8fafc,#0d0d14)"><div style="font-size:16px">🔄</div><div class="ts-name" style="color:var(--txt-primary)">Auto</div></div>
       </div>
     </div>
-
-    <!-- CURSOR & EFFECTS -->
     <div class="sect">
       <div class="sect-title">Cursor & Effects</div>
       <div class="toggle-wrap">
         <div class="toggle-desc"><strong>Cursor Glow</strong>Custom glow effect following your cursor</div>
-        <label class="toggle-switch" for="cursorGlowToggle" aria-label="Enable cursor glow">
-          <input type="checkbox" id="cursorGlowToggle"/>
-          <div class="toggle-track"></div>
-        </label>
+        <label class="toggle-switch" for="cursorGlowToggle" aria-label="Enable cursor glow"><input type="checkbox" id="cursorGlowToggle"/><div class="toggle-track"></div></label>
       </div>
       <div id="cursorStyleWrap" style="display:none;padding:8px 0">
         <div style="font-size:10px;color:var(--txt-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Cursor Style</div>
@@ -878,28 +816,17 @@ body{
       </div>
       <div class="toggle-wrap">
         <div class="toggle-desc"><strong>Typing Sounds</strong>Subtle click sounds while typing</div>
-        <label class="toggle-switch" for="typingSoundToggle" aria-label="Enable typing sounds">
-          <input type="checkbox" id="typingSoundToggle"/>
-          <div class="toggle-track"></div>
-        </label>
+        <label class="toggle-switch" for="typingSoundToggle" aria-label="Enable typing sounds"><input type="checkbox" id="typingSoundToggle"/><div class="toggle-track"></div></label>
       </div>
       <div class="toggle-wrap">
         <div class="toggle-desc"><strong>Particle Effects</strong>Particles on message send</div>
-        <label class="toggle-switch" for="particleToggle" aria-label="Enable particle effects">
-          <input type="checkbox" id="particleToggle"/>
-          <div class="toggle-track"></div>
-        </label>
+        <label class="toggle-switch" for="particleToggle" aria-label="Enable particle effects"><input type="checkbox" id="particleToggle"/><div class="toggle-track"></div></label>
       </div>
       <div class="toggle-wrap">
         <div class="toggle-desc"><strong>Send Haptics</strong>Vibration feedback on mobile</div>
-        <label class="toggle-switch" for="hapticToggle" aria-label="Enable haptic feedback">
-          <input type="checkbox" id="hapticToggle"/>
-          <div class="toggle-track"></div>
-        </label>
+        <label class="toggle-switch" for="hapticToggle" aria-label="Enable haptic feedback"><input type="checkbox" id="hapticToggle"/><div class="toggle-track"></div></label>
       </div>
     </div>
-
-    <!-- CUSTOM MODES -->
     <div class="sect">
       <div class="sect-title">Custom AI Modes</div>
       <div id="customModesList"></div>
@@ -1018,13 +945,10 @@ body{
 <!-- MAIN -->
 <div class="app">
   <main class="main" id="mainArea">
-    <!-- OFFLINE BANNER -->
     <div id="offlineBanner" role="status" aria-live="polite">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
       You're offline — messages will be queued and sent when reconnected
     </div>
-
-    <!-- GUEST BANNER -->
     <div id="guestBanner" role="status" aria-live="polite">
       <div class="limit-wrap">
         <div class="limit-item"><span style="color:var(--txt-secondary)">Chats</span><div class="limit-bar"><div class="limit-fill" id="chatLimitBar" style="width:0%"></div></div><span id="chatLimitTxt">0/3</span></div>
@@ -1032,8 +956,6 @@ body{
       </div>
       <button class="upgrade-cta" id="upgradeBtn">✦ Unlock Full Access</button>
     </div>
-
-    <!-- TOPBAR -->
     <header class="topbar">
       <button class="icon-btn mob-menu" id="openSidebar" aria-label="Open sidebar" style="display:none">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -1041,7 +963,6 @@ body{
       <h1 id="chatTitleEl" class="topbar-title">New conversation</h1>
       <div class="topbar-right">
         <div id="modePills" class="mode-pills" role="group" aria-label="Conversation modes"></div>
-        <!-- Summarize button -->
         <button class="icon-btn" id="summarizeBtn" title="Summarize chat (Ctrl+Shift+M)" aria-label="Summarize conversation">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
         </button>
@@ -1068,8 +989,6 @@ body{
         </div>
       </div>
     </header>
-
-    <!-- PINNED MESSAGES -->
     <div id="pinnedSection" role="region" aria-label="Pinned messages">
       <div class="pinned-header">
         <span>📌 Pinned Messages</span>
@@ -1077,8 +996,6 @@ body{
       </div>
       <div class="pinned-msgs" id="pinnedMsgsList"></div>
     </div>
-
-    <!-- SUMMARY PANEL -->
     <div id="summaryPanel" role="region" aria-label="Conversation summary">
       <div class="summary-header">
         <span class="summary-title">✦ Summary</span>
@@ -1086,8 +1003,6 @@ body{
       </div>
       <div class="summary-content" id="summaryContent"></div>
     </div>
-
-    <!-- MESSAGES -->
     <section id="msgsWrap" class="msgs-wrap" role="log" aria-label="Messages" aria-live="polite">
       <div class="msgs-inner" id="msgsInner">
         <div id="welcomeScreen">
@@ -1110,8 +1025,6 @@ body{
         </div>
       </div>
     </section>
-
-    <!-- INPUT AREA -->
     <div class="input-section">
       <div id="draftIndicator" class="draft-indicator" aria-live="polite">📝 Draft restored</div>
       <div id="suggestRow" class="suggest-row" style="display:none" role="group" aria-label="Suggested follow-ups"></div>
@@ -1149,8 +1062,14 @@ body{
 <script>
 (() => {
 'use strict';
-const API_KEY='AIzaSyBkQ8l916ybmlGSvM4iRqZXfAYUclP2lqo';
-const API_MODELS=['gemini-2.5-flash','gemini-2.0-flash','gemini-1.5-flash'];
+
+// ═══════════════════════════════════════════════════════════
+// ALL AI CALLS ROUTE THROUGH /api/chat BACKEND ONLY.
+// NO API KEYS IN FRONTEND. NO DIRECT GEMINI CALLS.
+// ═══════════════════════════════════════════════════════════
+
+const BACKEND_URL = '/api/chat';  // ← Single source of truth for API endpoint
+
 const COOLDOWN_MS=1200;const MAX_CTX=15;const GUEST_MAX_CHATS=3;const GUEST_MAX_MSGS=10;
 const MAX_CHARS=4000;const MAX_PINS=3;const REACTION_EMOJIS=['👍','👎','❤️','🔥','🎉','🤔','📌'];
 
@@ -1178,7 +1097,7 @@ let settings={
 let trailDots=[];let trailActive=false;
 let audioCtx=null;
 let draftSaveTimeout=null;
-let pinnedMessages={};// chatId -> [msgIds]
+let pinnedMessages={};
 
 const $=id=>document.getElementById(id);
 const authOverlay=$('authOverlay');
@@ -1204,7 +1123,6 @@ function applyTheme(theme){
   document.documentElement.setAttribute('data-theme',effectiveTheme);
   document.querySelectorAll('.theme-swatch').forEach(s=>s.classList.toggle('selected',s.dataset.themeVal===theme));
   settings.theme=theme;saveSettings();
-  // Sync cursor glow color
   if(trailActive)updateTrailColor();
 }
 
@@ -1380,7 +1298,144 @@ function renderPinned(){
   pl.querySelectorAll('[data-unpin]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();togglePin(activeChatId,b.dataset.unpin);}));
 }
 
-// ═══ SUMMARY ══════════════════════════
+// ═══════════════════════════════════════════════════════════
+// BACKEND API HELPERS
+// ALL AI requests go to BACKEND_URL (/api/chat) — no exceptions.
+// ═══════════════════════════════════════════════════════════
+
+/**
+ * Formats conversation history into a single text prompt.
+ * Includes the active mode's system prompt at the top.
+ * Sends the last MAX_CTX messages to keep context manageable.
+ */
+function buildPromptFromHistory(messages) {
+  const systemPrompt = MODES[activeMode]?.prompt || MODES.normal.prompt;
+  const recentMsgs = messages
+    .filter(m => !m.isError)
+    .slice(-MAX_CTX);
+
+  const conversation = recentMsgs
+    .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
+    .join('\n\n');
+
+  return `${systemPrompt}\n\n${conversation}\n\nAssistant:`;
+}
+
+/**
+ * REMOVED: streamResponse() — depended on Gemini SSE streaming.
+ * All responses are now non-streaming via /api/chat.
+ *
+ * REMOVED: callGemini() — called generativelanguage.googleapis.com directly.
+ * REMOVED: Any use of API_KEY, generateContent, streamGenerateContent.
+ *
+ * REPLACED WITH: callBackend() — routes through /api/chat only.
+ */
+
+/**
+ * Primary AI call — sends conversation history to backend.
+ * Backend handles Gemini API with the key stored server-side.
+ */
+async function callBackend(messages, images = []) {
+  abortCtrl = new AbortController();
+
+  // Build a formatted prompt string from conversation history
+  const message = buildPromptFromHistory(messages);
+
+  const requestBody = { message };
+
+  // If there are images, include them for potential future backend vision support
+  if (images && images.length > 0) {
+    requestBody.images = images.map(img => ({
+      base64: img.base64,
+      mimeType: img.mimeType
+    }));
+  }
+
+  const res = await fetch(BACKEND_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    signal: abortCtrl.signal,
+    body: JSON.stringify(requestBody)
+  });
+
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData?.error || `HTTP ${res.status}: ${res.statusText}`);
+  }
+
+  const data = await res.json();
+
+  // Safe response extraction — handles Gemini response format
+  let reply = 'No response received.';
+  if (data?.candidates?.length > 0) {
+    reply = data.candidates[0]?.content?.parts?.[0]?.text || reply;
+  } 
+  return reply.trim();
+}
+
+/**
+ * Fallback AI call — same backend endpoint, separate try/catch.
+ * Used when the primary callBackend() attempt fails.
+ */
+async function fallbackAPI(messages, images = []) {
+  // Re-create abort controller since primary one may be stale
+  abortCtrl = new AbortController();
+
+  const message = buildPromptFromHistory(messages);
+
+  try {
+    const res = await fetch(BACKEND_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: abortCtrl.signal,
+      body: JSON.stringify({ message })
+    });
+
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData?.error || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    let reply = 'No response from AI.';
+    if (data?.candidates?.length > 0) {
+      reply = data.candidates[0]?.content?.parts?.[0]?.text || reply;
+    }
+
+    return reply.trim();
+  } catch (e) {
+    if (e.name === 'AbortError') throw e;
+    throw new Error('ALL_FAILED');
+  }
+}
+
+/**
+ * API health check — pings backend only.
+ * No direct Gemini access from frontend.
+ */
+async function verifyAPI() {
+  try {
+    const res = await fetch(BACKEND_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'ping' })
+    });
+
+    if (res.ok) {
+      apiPill.textContent = '● Online';
+      apiPill.className = 'ok';
+    } else {
+      apiPill.textContent = '● API Error';
+      apiPill.className = 'err';
+    }
+  } catch {
+    apiPill.textContent = '● Offline';
+    apiPill.className = 'err';
+  }
+}
+
+// ═══ SUMMARY — uses BACKEND_URL only ════════
 async function summarizeChat(){
   const chat=chats.find(c=>c.id===activeChatId);
   if(!chat||chat.messages.length<2){toast('Not enough messages to summarize.','warn');return;}
@@ -1389,12 +1444,24 @@ async function summarizeChat(){
   try{
     const msgs=chat.messages.filter(m=>!m.isError).slice(-20);
     const conv=msgs.map(m=>`${m.role==='user'?'User':'AI'}: ${m.content.slice(0,200)}`).join('\n');
-    const prompt=`Summarize this conversation in exactly 5 concise bullet points. Return ONLY a markdown list with 5 bullet points starting with "- ". No intro text.\n\n${conv}`;
+    // ✅ Sends to backend via { message } — no direct Gemini call
+    const message=`Summarize this conversation in exactly 5 concise bullet points. Return ONLY a markdown list with 5 bullet points starting with "- ". No intro text.\n\n${conv}`;
     abortCtrl=new AbortController();
-    const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`,{method:'POST',headers:{'Content-Type':'application/json'},signal:abortCtrl.signal,body:JSON.stringify({contents:[{role:'user',parts:[{text:prompt}]}],generationConfig:{temperature:0.3,maxOutputTokens:400}})});
-    const d=await res.json();const txt=d?.candidates?.[0]?.content?.parts?.[0]?.text||'Could not generate summary.';
+    const res=await fetch(BACKEND_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      signal:abortCtrl.signal,
+      body:JSON.stringify({message})
+    });
+    if(!res.ok)throw new Error(`HTTP ${res.status}`);
+    const d=await res.json();
+    // Safe response extraction
+    let txt='Could not generate summary.';
+    if(d?.candidates?.length>0){txt=d.candidates[0]?.content?.parts?.[0]?.text||txt;}
     sc.innerHTML=renderMD(txt);
-  }catch(e){if(e.name!=='AbortError')sc.textContent='Could not generate summary. Check your connection.';}
+  }catch(e){
+    if(e.name!=='AbortError')sc.textContent='Could not generate summary. Check your connection.';
+  }
 }
 $('closeSummaryBtn').onclick=()=>$('summaryPanel').classList.remove('show');
 $('closePinnedBtn').onclick=()=>$('pinnedSection').classList.remove('show');
@@ -1414,7 +1481,6 @@ function doSignup(name,email,pass,grad){const users=getUsers();if(users.find(u=>
 function transferGuestChats(userId){try{const raw=localStorage.getItem('lmn_chats_guest');if(!raw)return;const gd=JSON.parse(raw);if(!gd.chats?.length)return;const key=`lmn_chats_${userId}`;const ex=JSON.parse(localStorage.getItem(key)||'{"chats":[]}');ex.chats=[...gd.chats,...(ex.chats||[])];localStorage.setItem(key,JSON.stringify(ex));localStorage.removeItem('lmn_chats_guest');}catch{}}
 function setUser(u){currentUser=u;saveSession(u);}
 function logout(){destroyCursorGlow();setUser(null);chats=[];activeChatId=null;pinnedMessages={};showAuth();}
-
 function showAuth(){authOverlay.style.display='flex';}
 function hideAuth(){authOverlay.style.animation='authOut .2s ease forwards';const style=document.createElement('style');style.textContent='@keyframes authOut{to{opacity:0}}';document.head.appendChild(style);setTimeout(()=>{authOverlay.style.display='none';style.remove();},220);}
 
@@ -1429,7 +1495,6 @@ function setupAuth(){
       else{hd.querySelector('.auth-heading').textContent='Join Lumina';hd.querySelector('.auth-subheading').textContent='Create your account and start having smarter conversations today.';}
     });
   });
-  // Ripple on CTA
   document.querySelectorAll('.btn-cta').forEach(btn=>{btn.addEventListener('click',e=>{const r=document.createElement('span');r.className='ripple';const rect=btn.getBoundingClientRect();const size=Math.max(rect.width,rect.height);r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px;`;btn.appendChild(r);setTimeout(()=>r.remove(),700);});});
   $('loginEye').onclick=()=>toggleEye('loginPass','loginEye');
   $('signupEye').onclick=()=>toggleEye('signupPass','signupEye');
@@ -1514,7 +1579,6 @@ function renderMessages(){
   welcomeScreen.style.display='none';chatTitleEl.textContent=chat.title;
   chat.messages.forEach(m=>appendMsg(m,false));
   scrollDown(false);updateSuggests();renderPinned();
-  // Restore draft
   restoreDraft(activeChatId);
 }
 
@@ -1531,7 +1595,6 @@ function appendMsg(msg,animate=true){
   if(ai&&!isErr)actions=`<div class="msg-actions"><button class="msg-act" data-action="copy" aria-label="Copy message">📋 Copy</button><button class="msg-act" data-action="regen" aria-label="Regenerate response">↩ Regen</button><button class="msg-act" data-action="pin" aria-label="${isPinned?'Unpin':'Pin'} message">${isPinned?'📌 Unpin':'📌 Pin'}</button></div>`;
   else if(!ai)actions=`<div class="msg-actions"><button class="msg-act" data-action="edit" aria-label="Edit message">✏ Edit</button><button class="msg-act" data-action="pin" aria-label="${isPinned?'Unpin':'Pin'} message">${isPinned?'📌 Unpin':'📌 Pin'}</button></div>`;
   const readReceiptHtml=ai&&!isErr?'<div class="read-receipt seen">✓✓ Seen</div>':'';
-  // Build reaction display
   const rxns=msg.reactions||{};
   const rxnHtml=ALL_REACTIONS.filter(e=>rxns[e]>0).map(e=>`<button class="react-btn ${rxns[e]?'on':''}" data-react="${e}" aria-label="React ${e}">${e}<span class="react-count">${rxns[e]>1?rxns[e]:''}</span></button>`).join('');
   row.innerHTML=`
@@ -1549,12 +1612,10 @@ function appendMsg(msg,animate=true){
       ${readReceiptHtml}
     </div>`;
   if(!ai&&currentUser?.avatarGradient){row.querySelector('.msg-avatar').style.background=currentUser.avatarGradient;row.querySelector('.msg-avatar').style.color='#0d0d14';}
-  // Image click → lightbox
   row.querySelectorAll('.msg-imgs img').forEach(img=>{
     img.addEventListener('click',()=>openLightbox(img.src));
     img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLightbox(img.src);});
   });
-  // Long-press for reaction picker
   setupLongPress(row,msg);
   row.querySelectorAll('[data-action]').forEach(btn=>{
     btn.addEventListener('click',()=>{
@@ -1565,7 +1626,6 @@ function appendMsg(msg,animate=true){
       else if(a==='pin'){togglePin(activeChatId,msg.id);renderMessages();}
     });
   });
-  // Reaction buttons
   row.querySelectorAll('[data-react]').forEach(btn=>{
     btn.addEventListener('click',()=>handleReaction(msg,btn.dataset.react,row));
   });
@@ -1575,14 +1635,13 @@ function appendMsg(msg,animate=true){
 function setupLongPress(row,msg){
   let pressTimer=null;
   const bubble=row.querySelector('.msg-bubble');if(!bubble)return;
-  const startPress=(e)=>{pressTimer=setTimeout(()=>{showReactionPicker(bubble,msg,row);},600);};
+  const startPress=()=>{pressTimer=setTimeout(()=>{showReactionPicker(bubble,msg,row);},600);};
   const endPress=()=>{if(pressTimer){clearTimeout(pressTimer);pressTimer=null;}};
   bubble.addEventListener('mousedown',startPress);bubble.addEventListener('mouseup',endPress);bubble.addEventListener('mouseleave',endPress);
   bubble.addEventListener('touchstart',startPress,{passive:true});bubble.addEventListener('touchend',endPress);
 }
 
 function showReactionPicker(bubble,msg,row){
-  // Remove existing pickers
   document.querySelectorAll('.reaction-picker').forEach(p=>p.remove());
   const picker=document.createElement('div');picker.className='reaction-picker open';
   picker.innerHTML=ALL_REACTIONS.map(e=>`<span class="react-option" role="button" tabindex="0" aria-label="React with ${e}">${e}</span>`).join('');
@@ -1599,7 +1658,6 @@ function handleReaction(msg,emoji,row){
   if(!m.reactions)m.reactions={};
   if(m.reactions[emoji]){m.reactions[emoji]--;if(m.reactions[emoji]<=0)delete m.reactions[emoji];}else{m.reactions[emoji]=(m.reactions[emoji]||0)+1;}
   saveChats();
-  // Update UI
   const rxnContainer=row.querySelector('.msg-reactions');if(!rxnContainer)return;
   const rxns=m.reactions||{};
   rxnContainer.innerHTML=ALL_REACTIONS.filter(e=>rxns[e]>0).map(e=>`<button class="react-btn ${rxns[e]?'on':''}" data-react="${e}" aria-label="React ${e}">${e}<span class="react-count">${rxns[e]>1?rxns[e]:''}</span></button>`).join('');
@@ -1660,29 +1718,6 @@ function setupVoice(){
   micBtn.onclick=()=>{if(!recognition){toast('Voice not supported','warn');return;}if(isListening){recognition.stop();isListening=false;micBtn.classList.remove('active');micBtn.setAttribute('aria-pressed','false');}else{recognition.start();isListening=true;micBtn.classList.add('active');micBtn.setAttribute('aria-pressed','true');toast('🎙 Listening…');}};
 }
 
-// ═══ API ══════════════════════════════
-function buildContents(messages,images=[]){
-  const sys=MODES[activeMode]?.prompt||MODES.normal.prompt;
-  const contents=[{role:'user',parts:[{text:`System: ${sys}\n\nPlease follow these instructions.`}]},{role:'model',parts:[{text:'Understood.'}]}];
-  const recent=messages.filter(m=>!m.isError).slice(-MAX_CTX);
-  for(const msg of recent){const parts=[{text:msg.content}];contents.push({role:msg.role==='ai'?'model':'user',parts});}
-  if(images.length&&contents.length){const last=contents[contents.length-1];if(last.role==='user')images.forEach(img=>last.parts.unshift({inlineData:{mimeType:img.mimeType,data:img.base64}}));}
-  return contents;
-}
-async function streamResponse(messages,images=[]){
-  const contents=buildContents(messages,images);abortCtrl=new AbortController();
-  for(const model of API_MODELS){try{const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${API_KEY}&alt=sse`,{method:'POST',headers:{'Content-Type':'application/json'},signal:abortCtrl.signal,body:JSON.stringify({contents,generationConfig:{temperature:0.75,maxOutputTokens:2048,topP:0.95,topK:40}})});if(res.ok)return{res,model};}catch(e){if(e.name==='AbortError')throw e;}}throw new Error('ALL_FAILED');
-}
-async function readStream(response,onChunk){
-  const reader=response.body.getReader();const dec=new TextDecoder();let buf='',full='';
-  while(true){const{done,value}=await reader.read();if(done)break;buf+=dec.decode(value,{stream:true});const lines=buf.split('\n');buf=lines.pop()||'';for(const line of lines){if(!line.startsWith('data: '))continue;const data=line.slice(6).trim();if(data==='[DONE]')continue;try{const p=JSON.parse(data);const chunk=p?.candidates?.[0]?.content?.parts?.[0]?.text||'';if(chunk){full+=chunk;onChunk(chunk,full);}}catch{}}}
-  return full;
-}
-async function fallbackAPI(messages,images=[]){
-  const contents=buildContents(messages,images);
-  for(const model of API_MODELS){try{const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`,{method:'POST',headers:{'Content-Type':'application/json'},signal:abortCtrl?.signal,body:JSON.stringify({contents,generationConfig:{temperature:0.75,maxOutputTokens:2048}})});const d=await res.json();if(res.ok&&d?.candidates?.[0]?.content?.parts?.[0]?.text)return d.candidates[0].content.parts[0].text.trim();}catch(e){if(e.name==='AbortError')throw e;}}throw new Error('ALL_FAILED');
-}
-
 // ═══ SEND ═════════════════════════════
 async function handleSend(override=null){
   const text=override!==null?override:msgInput?.value.trim();
@@ -1701,41 +1736,48 @@ async function handleSend(override=null){
   if(chat.messages.filter(m=>m.role==='user').length===1){chat.title=titleize(text||'Image');chatTitleEl.textContent=chat.title;}
   welcomeScreen.style.display='none';suggestRow.style.display='none';
   appendMsg(userMsg,true);scrollDown(true);saveChats();renderChatList();
-  // Particle burst
   const sb=sendBtn.getBoundingClientRect();spawnParticles(sb.left+sb.width/2,sb.top+sb.height/2);
   hapticFeedback();
   sendBtn.classList.add('sending');setTimeout(()=>sendBtn.classList.remove('sending'),600);
-  // Clear draft
   saveDraft(activeChatId,'');
   if(msgInput){msgInput.value='';autoResize();}updateGuestLimits();
   isWaiting=true;sendBtn.disabled=true;if(msgInput)msgInput.disabled=true;stopBtn.classList.add('show');showTyping();
   stats.msgs++;stats.apiCalls++;const t0=Date.now();lastSend=Date.now();
   try{
-    abortCtrl=new AbortController();let aiText='';
+    let aiText='';
+
+    // ✅ PRIMARY: call backend — no direct Gemini from frontend
     try{
-      const{res}=await streamResponse(chat.messages.filter(m=>!m.isError),imgs);
-      removeTyping();const sRow=document.createElement('div');sRow.className='msg-row ai';sRow.id='streamRow';
-      sRow.innerHTML='<div class="msg-avatar" aria-hidden="true">LM</div><div class="msg-body"><div class="msg-bubble" id="streamBubble"></div></div>';
-      msgsInner.appendChild(sRow);const sBubble=$('streamBubble');scrollDown(true);
-      aiText=await readStream(res,(chunk,full)=>{if(sBubble){sBubble.innerHTML=renderMD(full)+'<span class="stream-cursor"></span>';scrollDown(false);}});
-      if(sBubble)sBubble.innerHTML=renderMD(aiText);sRow.remove();
-    }catch(streamErr){
-      $('streamRow')?.remove();if(streamErr.name==='AbortError')throw streamErr;
-      removeTyping();showTyping();abortCtrl=new AbortController();
-      aiText=await fallbackAPI(chat.messages.filter(m=>!m.isError),imgs);removeTyping();
+      aiText = await callBackend(chat.messages.filter(m=>!m.isError), imgs);
+      removeTyping();
+    }catch(primaryErr){
+      removeTyping();
+      if(primaryErr.name==='AbortError')throw primaryErr;
+
+      // ✅ FALLBACK: retry via same backend endpoint
+      toast('Retrying…','warn',1500);
+      showTyping();
+      aiText = await fallbackAPI(chat.messages.filter(m=>!m.isError), imgs);
+      removeTyping();
     }
-    if(!aiText)throw new Error('Empty');
+
+    if(!aiText)throw new Error('Empty response');
     const elapsed=Date.now()-t0;stats.rTimes.push(elapsed);if(stats.rTimes.length>50)stats.rTimes.shift();
     stats.msgs++;stats.tokensEst+=Math.ceil(aiText.length/4);saveStats();
-    // Milestone
     if(stats.msgs===100)toast('🎉 100 messages! Keep exploring!','success',4000);
     const aiMsg={id:uid(),role:'ai',content:aiText,time:new Date().toISOString(),reactions:{}};
     chat.messages.push(aiMsg);appendMsg(aiMsg,true);
     apiPill.textContent='● Online';apiPill.className='ok';
     updateSuggests();
   }catch(err){
-    $('streamRow')?.remove();removeTyping();
-    if(err.name!=='AbortError'){let errMsg='Unable to get a response. Check your connection.';if(err.message==='ALL_FAILED')errMsg='All models unavailable. Check your API key.';const errObj={id:uid(),role:'ai',content:errMsg,time:new Date().toISOString(),isError:true,reactions:{}};chat.messages.push(errObj);appendMsg(errObj,true);apiPill.textContent='● Error';apiPill.className='err';}else toast('Generation stopped.','');
+    removeTyping();
+    if(err.name!=='AbortError'){
+      let errMsg='Unable to get a response. Check your connection.';
+      if(err.message==='ALL_FAILED')errMsg='AI service unavailable. Check backend configuration.';
+      const errObj={id:uid(),role:'ai',content:errMsg,time:new Date().toISOString(),isError:true,reactions:{}};
+      chat.messages.push(errObj);appendMsg(errObj,true);
+      apiPill.textContent='● Error';apiPill.className='err';
+    }else{toast('Generation stopped.','');}
   }finally{
     isWaiting=false;if(msgInput)msgInput.disabled=false;
     sendBtn.disabled=!msgInput?.value.trim()&&!pendingImgs.length;
@@ -1758,21 +1800,34 @@ function openEditModal(msg){editMsgId=msg.id;$('editTextarea').value=msg.content
 $('confirmEditBtn').onclick=async()=>{const newContent=$('editTextarea').value.trim();if(!newContent||!editMsgId)return;const chat=chats.find(c=>c.id===activeChatId);if(!chat){closeModal('editModal');return;}const idx=chat.messages.findIndex(m=>m.id===editMsgId);if(idx===-1){closeModal('editModal');return;}chat.messages[idx].content=newContent;chat.messages[idx].edited=true;chat.messages=chat.messages.slice(0,idx+1);closeModal('editModal');renderMessages();saveChats();await triggerAI();};
 $('cancelEditBtn').onclick=()=>closeModal('editModal');
 
+/**
+ * triggerAI — internal helper for regen and edit flows.
+ * Routes through backend only — no direct Gemini.
+ */
 async function triggerAI(){
   const chat=chats.find(c=>c.id===activeChatId);if(!chat||!chat.messages.length||isWaiting)return;
-  isWaiting=true;sendBtn.disabled=true;if(msgInput)msgInput.disabled=true;stopBtn.classList.add('show');showTyping();abortCtrl=new AbortController();const t0=Date.now();
+  isWaiting=true;sendBtn.disabled=true;if(msgInput)msgInput.disabled=true;stopBtn.classList.add('show');showTyping();
+  const t0=Date.now();
   try{
-    const{res}=await streamResponse(chat.messages.filter(m=>!m.isError),[]);removeTyping();
-    const sRow=document.createElement('div');sRow.className='msg-row ai';sRow.id='streamRow';
-    sRow.innerHTML='<div class="msg-avatar" aria-hidden="true">LM</div><div class="msg-body"><div class="msg-bubble" id="streamBubble"></div></div>';
-    msgsInner.appendChild(sRow);const sBubble=$('streamBubble');
-    const aiText=await readStream(res,(chunk,full)=>{if(sBubble){sBubble.innerHTML=renderMD(full)+'<span class="stream-cursor"></span>';scrollDown(false);}});
-    if(sBubble)sBubble.innerHTML=renderMD(aiText);sRow.remove();
+    // ✅ Backend-only call
+    const aiText = await callBackend(chat.messages.filter(m=>!m.isError), []);
+    removeTyping();
     stats.rTimes.push(Date.now()-t0);
     const aiMsg={id:uid(),role:'ai',content:aiText,time:new Date().toISOString(),reactions:{}};
     chat.messages.push(aiMsg);appendMsg(aiMsg,true);updateSuggests();
-  }catch(e){$('streamRow')?.remove();removeTyping();if(e.name!=='AbortError'){const o={id:uid(),role:'ai',content:'Could not get response.',time:new Date().toISOString(),isError:true,reactions:{}};chat.messages.push(o);appendMsg(o,true);}}
-  finally{isWaiting=false;if(msgInput)msgInput.disabled=false;sendBtn.disabled=!msgInput?.value.trim();stopBtn.classList.remove('show');abortCtrl=null;scrollDown(true);saveChats();}
+    apiPill.textContent='● Online';apiPill.className='ok';
+  }catch(e){
+    removeTyping();
+    if(e.name!=='AbortError'){
+      const o={id:uid(),role:'ai',content:'Could not get response. Please try again.',time:new Date().toISOString(),isError:true,reactions:{}};
+      chat.messages.push(o);appendMsg(o,true);
+      apiPill.textContent='● Error';apiPill.className='err';
+    }
+  }finally{
+    isWaiting=false;if(msgInput)msgInput.disabled=false;
+    sendBtn.disabled=!msgInput?.value.trim();stopBtn.classList.remove('show');
+    abortCtrl=null;scrollDown(true);saveChats();
+  }
 }
 
 // ═══ SEARCH ═══════════════════════════
@@ -1806,12 +1861,7 @@ function expJson(){const c=getChat();if(!c)return;dlFile(JSON.stringify({title:c
 async function expZip(){if(currentUser?.type==='guest'){toast('Export not available in Guest mode.','warn');return;}if(!chats.length){toast('No chats to export.','warn');return;}if(typeof JSZip==='undefined'){toast('JSZip not loaded.','error');return;}const zip=new JSZip();chats.forEach(c=>{const lines=[`# ${c.title}`,''];c.messages.forEach(m=>{lines.push(`[${m.role.toUpperCase()}]`);lines.push(m.content);lines.push('');});zip.file(`${safeTitle(c.title)}_${c.id.slice(0,6)}.md`,lines.join('\n'));});const blob=await zip.generateAsync({type:'blob'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='lumina_chats.zip';a.click();URL.revokeObjectURL(url);toast(`Exported ${chats.length} chats!`,'success');}
 
 // ═══ MODALS ═══════════════════════════
-function openModal(id){const m=$(id);if(!m)return;m.classList.add('open');// Focus trap
-setTimeout(()=>{const focusable=m.querySelectorAll('button,input,textarea,[tabindex]:not([tabindex="-1"])');if(focusable.length)focusable[0].focus();},50);
-// Trap focus
-m._focusTrap=e=>{if(e.key!=='Tab')return;const els=[...m.querySelectorAll('button,input,textarea,[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled);if(!els.length)return;const first=els[0],last=els[els.length-1];if(e.shiftKey){if(document.activeElement===first){e.preventDefault();last.focus();}}else{if(document.activeElement===last){e.preventDefault();first.focus();}}};
-m.addEventListener('keydown',m._focusTrap);
-}
+function openModal(id){const m=$(id);if(!m)return;m.classList.add('open');setTimeout(()=>{const focusable=m.querySelectorAll('button,input,textarea,[tabindex]:not([tabindex="-1"])');if(focusable.length)focusable[0].focus();},50);m._focusTrap=e=>{if(e.key!=='Tab')return;const els=[...m.querySelectorAll('button,input,textarea,[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled);if(!els.length)return;const first=els[0],last=els[els.length-1];if(e.shiftKey){if(document.activeElement===first){e.preventDefault();last.focus();}}else{if(document.activeElement===last){e.preventDefault();first.focus();}}};m.addEventListener('keydown',m._focusTrap);}
 function closeModal(id){const m=$(id);if(!m)return;m.classList.remove('open');if(m._focusTrap){m.removeEventListener('keydown',m._focusTrap);delete m._focusTrap;}}
 document.querySelectorAll('[data-close]').forEach(btn=>btn.addEventListener('click',()=>closeModal(btn.dataset.close)));
 document.querySelectorAll('.modal-bd').forEach(bd=>bd.addEventListener('click',e=>{if(e.target===bd)closeModal(bd.id);}));
@@ -1819,19 +1869,11 @@ window.openModal=openModal;
 
 // ═══ SETTINGS UI ══════════════════════
 function setupSettingsUI(){
-  // Theme
-  document.querySelectorAll('.theme-swatch').forEach(sw=>{
-    sw.addEventListener('click',()=>applyTheme(sw.dataset.themeVal));
-  });
-  // Cursor glow
+  document.querySelectorAll('.theme-swatch').forEach(sw=>{sw.addEventListener('click',()=>applyTheme(sw.dataset.themeVal));});
   $('cursorGlowToggle').addEventListener('change',function(){settings.cursorGlow=this.checked;$('cursorStyleWrap').style.display=this.checked?'block':'none';if(this.checked)initCursorGlow();else destroyCursorGlow();saveSettings();});
-  // Cursor styles
   document.querySelectorAll('.cursor-style-btn').forEach(b=>{b.addEventListener('click',()=>{settings.cursorStyle=b.dataset.cursor;document.querySelectorAll('.cursor-style-btn').forEach(x=>x.classList.toggle('active',x===b));if(settings.cursorStyle==='trail')initTrail();else destroyTrail();saveSettings();});});
-  // Typing sounds
   $('typingSoundToggle').addEventListener('change',function(){settings.typingSound=this.checked;saveSettings();if(this.checked)toast('Typing sounds on','',1500);});
-  // Particles
   $('particleToggle').addEventListener('change',function(){settings.particles=this.checked;saveSettings();});
-  // Haptic
   $('hapticToggle').addEventListener('change',function(){settings.haptic=this.checked;saveSettings();});
 }
 
@@ -1893,9 +1935,6 @@ function setupKeyboard(){
   });
 }
 
-// ═══ API VERIFY ═══════════════════════
-async function verifyAPI(){try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${API_KEY}`);if(r.ok){apiPill.textContent='● Online';apiPill.className='ok';}else{apiPill.textContent='● API Error';apiPill.className='err';}}catch{apiPill.textContent='● Offline';apiPill.className='err';}}
-
 // ═══ INPUT EVENTS ═════════════════════
 function setupInputEvents(){
   msgInput.addEventListener('input',()=>{
@@ -1904,10 +1943,8 @@ function setupInputEvents(){
     sendBtn.disabled=!msgInput.value.trim()&&!pendingImgs.length;
     const cc=$('charCount');
     if(len>0){cc.textContent=`${len}/${MAX_CHARS}`;cc.className='char-count'+(len>MAX_CHARS*0.9?' danger':len>MAX_CHARS*0.75?' warn':'');}else{cc.textContent='';}
-    // Auto-save draft
     clearTimeout(draftSaveTimeout);
     draftSaveTimeout=setTimeout(()=>saveDraft(activeChatId,msgInput.value),500);
-    // Typing sound
     playTypingClick();
   });
   msgInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.ctrlKey){e.preventDefault();handleSend();}});
@@ -1943,7 +1980,6 @@ function initApp(){
   const savedMode=localStorage.getItem(modeKey());if(savedMode&&MODES[savedMode])activeMode=savedMode;else activeMode='normal';
   updateProfileUI();renderModes();renderChatList();renderMessages();verifyAPI();applySettings();
   if(window.innerWidth<=768){$('sidebarClose').style.display='flex';$('openSidebar').style.display='inline-flex';}
-  // Show skeletons for a moment
   if(!chats.length){const sk1=document.createElement('div');sk1.className='skeleton skeleton-chat-item';const sk2=document.createElement('div');sk2.className='skeleton skeleton-chat-item';chatListEl.prepend(sk1,sk2);setTimeout(()=>{sk1.remove();sk2.remove();},800);}
 }
 
